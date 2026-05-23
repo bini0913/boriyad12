@@ -25,13 +25,13 @@ function HeroButton({
       href={href}
       className={cn(
         "group inline-flex items-center justify-center gap-2 rounded-sm px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300",
-        "hover:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A86A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#081B33]",
+        "hover:scale-[1.03] hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A86A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#081B33]",
         variant === "primary" &&
-          "bg-[#C9A86A] text-[#081B33] shadow-lg shadow-[#C9A86A]/20 hover:shadow-[#C9A86A]/40",
+          "bg-[#C9A86A] text-[#081B33] shadow-lg shadow-[#C9A86A]/25 hover:shadow-[0_0_32px_rgba(201,168,106,0.55)]",
         variant === "outline" &&
-          "border border-[#C9A86A] bg-transparent text-white hover:bg-[#C9A86A]/10 hover:shadow-[0_0_24px_rgba(201,168,106,0.25)]",
+          "border border-[#C9A86A] bg-transparent text-white hover:bg-[#C9A86A]/10 hover:shadow-[0_0_28px_rgba(201,168,106,0.38)]",
         variant === "video" &&
-          "border border-[#C9A86A]/80 bg-transparent text-white hover:bg-[#C9A86A]/10 hover:shadow-[0_0_24px_rgba(201,168,106,0.2)]"
+          "border border-[#C9A86A]/80 bg-transparent text-white hover:bg-[#C9A86A]/10 hover:shadow-[0_0_26px_rgba(201,168,106,0.34)]"
       )}
     >
       {icon}
