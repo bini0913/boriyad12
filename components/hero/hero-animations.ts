@@ -1,14 +1,26 @@
 import type { Transition, Variants } from "framer-motion";
 
 export const heroEase: Transition = {
-  duration: 5,
+  duration: 8,
   repeat: Infinity,
   ease: "easeInOut",
 };
 
 export const backgroundMotion = {
-  scale: [1, 1.05, 1],
-  x: ["0%", "1.5%", "0%"],
+  scale: [1, 1.03, 1],
+};
+
+export const girlMotion = {
+  y: [0, -4, 0],
+  scale: [1, 1.01, 1],
+};
+
+export const girlSway = {
+  rotate: [0, 0.5, 0],
+};
+
+export const booksMotion = {
+  x: [0, 2, 0],
 };
 
 export const studentFloat = {
@@ -45,7 +57,7 @@ export const fadeUpVariants: Variants = {
 
 export function iconFloat(duration: number) {
   return {
-    y: [0, -10, 0],
+    y: [0, -6, 0],
     transition: {
       duration,
       repeat: Infinity,

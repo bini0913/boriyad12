@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const ICONS = [
   { Icon: GraduationCap, className: "left-[54%] top-[20%]", duration: 5 },
   { Icon: BookOpen, className: "left-[48%] top-[36%]", duration: 6 },
-  { Icon: Lightbulb, className: "right-[24%] top-[26%]", duration: 4 },
+  { Icon: Lightbulb, className: "right-[24%] top-[26%]", duration: 7 },
   { Icon: Globe, className: "right-[20%] top-[44%]", duration: 5 },
   { Icon: FlaskConical, className: "right-[28%] top-[58%] hidden lg:block", duration: 6 },
 ] as const;
