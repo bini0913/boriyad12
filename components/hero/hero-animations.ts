@@ -7,8 +7,8 @@ export const heroEase: Transition = {
 };
 
 export const backgroundMotion = {
-  scale: [1, 1.05, 1],
-  x: ["0%", "1.5%", "0%"],
+  scale: [1, 1.03, 1],
+  y: [0, -5, 0],
 };
 
 export const studentFloat = {
