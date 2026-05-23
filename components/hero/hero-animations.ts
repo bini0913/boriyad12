@@ -8,19 +8,7 @@ export const heroEase: Transition = {
 
 export const backgroundMotion = {
   scale: [1, 1.03, 1],
-};
-
-export const girlMotion = {
-  y: [0, -4, 0],
-  scale: [1, 1.01, 1],
-};
-
-export const girlSway = {
-  rotate: [0, 0.5, 0],
-};
-
-export const booksMotion = {
-  x: [0, 2, 0],
+  y: [0, -5, 0],
 };
 
 export const studentFloat = {
