@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { PageHero } from "@/components/layout/page-hero";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
@@ -21,6 +22,39 @@ export default async function AboutPage() {
     <>
       <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} description={t("hero.description")} />
       <Section>
+        <div className="mb-16 grid gap-8 overflow-hidden rounded-2xl border border-border/60 bg-[#F8F7F4] p-6 shadow-[0_18px_60px_rgba(8,27,51,0.12)] lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-12 lg:p-10">
+          <ScrollReveal>
+            <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-[#C9A86A]/35 bg-[#081B33]/5">
+              <Image
+                src="/hero/bya-hero-cinematic.jpg"
+                alt={t("leadership.imageAlt")}
+                width={900}
+                height={1120}
+                className="h-full w-full object-cover motion-safe:animate-[subtlePulse_6s_ease-in-out_infinite]"
+                priority
+              />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={0.08}>
+            <div>
+              <p className="text-xs font-semibold tracking-[0.22em] text-[#C9A86A]">{t("leadership.eyebrow")}</p>
+              <h2 className="mt-3 font-display text-3xl font-semibold text-[#081B33] md:text-4xl">{t("leadership.title")}</h2>
+              <div className="mt-5 border-l-2 border-[#C9A86A] pl-4">
+                <p className="font-display text-xl text-[#081B33]">{t("leadership.name")}</p>
+                <p className="mt-1 text-sm font-medium leading-relaxed text-[#081B33]/80">{t("leadership.role")}</p>
+                <p className="text-sm font-medium leading-relaxed text-[#081B33]/80">{t("leadership.school")}</p>
+              </div>
+              <p className="mt-6 text-base leading-relaxed text-[#081B33]/80">{t("leadership.message")}</p>
+              <div className="mt-7 border-t border-[#C9A86A]/45 pt-5">
+                <p className="text-xs uppercase tracking-[0.2em] text-[#081B33]/50">{t("leadership.signatureLabel")}</p>
+                <p className="mt-2 font-display text-lg italic text-[#081B33]/75">{t("leadership.signatureName")}</p>
+              </div>
+              <button className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#081B33] px-6 py-3 text-sm font-semibold text-[#F8F7F4] transition-all duration-300 hover:bg-[#0d2747] hover:shadow-[0_0_22px_rgba(201,168,106,0.45)]">
+                {t("leadership.cta")}
+              </button>
+            </div>
+          </ScrollReveal>
+        </div>
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <ScrollReveal>
             <SectionHeader
