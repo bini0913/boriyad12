@@ -11,7 +11,7 @@ export function HeroBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden" aria-hidden>
       <motion.div
-        className="absolute inset-0 scale-105"
+        className="absolute inset-0"
         animate={reduced ? undefined : backgroundMotion}
         transition={reduced ? undefined : heroEase}
       >
@@ -20,18 +20,15 @@ export function HeroBackground() {
           alt=""
           fill
           priority
-          className="object-cover object-[72%_center]"
+          className="object-cover object-[70%_center] md:object-contain md:object-center lg:object-cover lg:object-center"
           sizes="100vw"
           quality={92}
         />
       </motion.div>
 
-      {/* Cinematic depth */}
-      <div className="absolute inset-0 bg-[#081B33]/55 backdrop-blur-[2px]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#081B33] via-[#081B33]/92 to-[#081B33]/25" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#081B33] via-transparent to-[#081B33]/40" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,rgba(201,168,106,0.12),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_80%,rgba(8,27,51,0.9),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[#081B33]/38" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#081B33]/88 via-[#081B33]/62 to-[#081B33]/24" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#081B33]/66 via-transparent to-[#081B33]/36" />
     </div>
   );
 }
