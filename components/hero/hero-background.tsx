@@ -2,7 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { backgroundMotion, heroEase } from "@/components/hero/hero-animations";
+import {
+  backgroundMotion,
+  booksMotion,
+  girlMotion,
+  girlSway,
+  heroEase,
+} from "@/components/hero/hero-animations";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 export function HeroBackground() {

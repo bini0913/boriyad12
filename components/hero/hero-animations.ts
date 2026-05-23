@@ -1,7 +1,7 @@
 import type { Transition, Variants } from "framer-motion";
 
 export const heroEase: Transition = {
-  duration: 5,
+  duration: 8,
   repeat: Infinity,
   ease: "easeInOut",
 };
@@ -45,7 +45,7 @@ export const fadeUpVariants: Variants = {
 
 export function iconFloat(duration: number) {
   return {
-    y: [0, -10, 0],
+    y: [0, -6, 0],
     transition: {
       duration,
       repeat: Infinity,
