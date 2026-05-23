@@ -1,8 +1,8 @@
 import type { Transition, Variants } from "framer-motion";
 
 export const heroCompositionMotion = {
-  scale: [1, 1.03, 1],
-  y: [0, -5, 0],
+  scale: [1, 1.01, 1],
+  y: [0, -3, 0],
 };
 
 export const heroCompositionTransition: Transition = {

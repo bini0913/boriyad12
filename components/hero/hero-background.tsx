@@ -20,7 +20,7 @@ export function HeroBackground() {
           alt=""
           fill
           priority
-          className="object-cover object-[70%_center] md:object-contain md:object-center lg:object-cover lg:object-center"
+          className="object-cover object-[68%_center] sm:object-[70%_center] md:object-contain md:object-center lg:object-cover lg:object-center"
           sizes="100vw"
           quality={92}
         />
