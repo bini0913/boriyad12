@@ -77,6 +77,17 @@
   }
 }
 
+
+@keyframes subtlePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
