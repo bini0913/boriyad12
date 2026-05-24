@@ -57,17 +57,12 @@ export function SiteHeader() {
           className="flex min-w-0 shrink-0 items-center gap-2.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A86A] sm:gap-3"
           aria-label={`${t("siteName")} home`}
         >
-          <Image
-            src="/logo.svg"
-            alt=""
-            width={52}
-            height={52}
-            className="h-11 w-11 rounded-full object-contain sm:h-12 sm:w-12"
-            priority
-          />
+          <Image src="/logo.svg" alt="" width={52} height={52} className="h-11 w-11 object-contain sm:h-12 sm:w-12" priority />
           <div className="hidden min-w-0 sm:block">
-            <p className="truncate font-sans text-[11px] font-bold uppercase tracking-[0.12em] text-white md:text-xs">
-              {t("siteName")}
+            <p className="truncate font-sans text-[11px] font-bold uppercase leading-tight tracking-[0.08em] text-white md:text-xs">
+              BORIYAD
+              <br />
+              YOUTH ACADEMY
             </p>
             <p className="truncate text-[9px] font-medium uppercase tracking-[0.2em] text-[#C9A86A] md:text-[10px]">
               {t("tagline")}
