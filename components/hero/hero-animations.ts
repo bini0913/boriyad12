@@ -1,34 +1,12 @@
 import type { Transition, Variants } from "framer-motion";
 
-export const heroEase: Transition = {
-  duration: 8,
-  repeat: Infinity,
-  ease: "easeInOut",
-};
-
-export const backgroundMotion = {
-  scale: [1, 1.03, 1],
-};
-
-export const girlMotion = {
-  y: [0, -4, 0],
+export const heroCompositionMotion = {
   scale: [1, 1.01, 1],
+  y: [0, -3, 0],
 };
 
-export const girlSway = {
-  rotate: [0, 0.5, 0],
-};
-
-export const booksMotion = {
-  x: [0, 2, 0],
-};
-
-export const studentFloat = {
-  y: [0, -8, 0],
-};
-
-export const studentTransition: Transition = {
-  duration: 4,
+export const heroCompositionTransition: Transition = {
+  duration: 5,
   repeat: Infinity,
   ease: "easeInOut",
 };
