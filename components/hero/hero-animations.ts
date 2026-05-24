@@ -11,7 +11,7 @@ export const backgroundMotion = {
 };
 
 export const girlMotion = {
-  y: [0, -4, 0],
+  y: [0, -3, 0],
   scale: [1, 1.01, 1],
 };
 
@@ -24,11 +24,12 @@ export const booksMotion = {
 };
 
 export const studentFloat = {
-  y: [0, -8, 0],
+  y: [0, -3, 0],
+  scale: [1, 1.01, 1],
 };
 
 export const studentTransition: Transition = {
-  duration: 4,
+  duration: 5,
   repeat: Infinity,
   ease: "easeInOut",
 };

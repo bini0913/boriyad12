@@ -47,8 +47,22 @@ export function HeroBackground() {
               src="/hero/bya-hero-cinematic.jpg"
               alt=""
               fill
-              className="object-cover object-[78%_34%] scale-[1.3]"
+              className="object-cover object-[78%_34%] scale-[1.3] saturate-[0.95] contrast-[1.04]"
               sizes="36vw"
+            />
+
+            <div
+              aria-hidden
+              className="absolute right-[14%] top-[20%] h-[44%] w-[48%] rounded-[36%] bg-[#0a1b3f]/32 mix-blend-multiply"
+            />
+            <div
+              aria-hidden
+              className="absolute right-[36.5%] top-[31%] h-[26%] w-[6.8%] bg-gradient-to-b from-[#081739] via-[#0b204a] to-[#050c1f]"
+              style={{ clipPath: "polygon(50% 0, 100% 16%, 68% 100%, 32% 100%, 0 16%)" }}
+            />
+            <div
+              aria-hidden
+              className="absolute right-[39%] top-[33.2%] h-[3.8%] w-[2.8%] rounded-full border border-[#d4a739]/70 bg-[#0d1f45] shadow-[0_0_8px_rgba(212,167,57,0.22)]"
             />
           </div>
         </motion.div>

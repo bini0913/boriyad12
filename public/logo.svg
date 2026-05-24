@@ -1,44 +1,49 @@
 <svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Boriyad Youth Academy logo">
   <defs>
-    <linearGradient id="orb" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#2CC8C5"/>
-      <stop offset="45%" stop-color="#0D6CA6"/>
-      <stop offset="100%" stop-color="#132C64"/>
+    <linearGradient id="tealOrb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4cc7c7"/>
+      <stop offset="60%" stop-color="#0e7f8d"/>
+      <stop offset="100%" stop-color="#0a5f6f"/>
     </linearGradient>
-    <linearGradient id="swooshA" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#26C6BE"/>
-      <stop offset="100%" stop-color="#0F4D8B"/>
+    <linearGradient id="blueBand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f78c8"/>
+      <stop offset="100%" stop-color="#1f2f74"/>
     </linearGradient>
-    <linearGradient id="swooshB" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1E6EC0"/>
-      <stop offset="100%" stop-color="#1A2F72"/>
+    <linearGradient id="cyanBand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3fd3ca"/>
+      <stop offset="100%" stop-color="#1578aa"/>
     </linearGradient>
-    <path id="topArc" d="M42 66 A78 78 0 0 1 194 62"/>
-    <path id="bottomArc" d="M48 173 A88 88 0 0 0 198 177"/>
+    <path id="outerTop" d="M25 80 A108 108 0 0 1 206 72"/>
+    <path id="outerBottom" d="M44 178 A98 98 0 0 0 201 186"/>
+    <path id="innerBottom" d="M54 156 A86 86 0 0 0 184 164"/>
   </defs>
 
-  <circle cx="120" cy="120" r="116" fill="#F7F9FC"/>
+  <circle cx="120" cy="120" r="116" fill="#f4f4f4"/>
 
-  <path d="M38 168 C72 144 105 132 152 134 C129 152 107 177 90 216 C68 204 52 189 38 168Z" fill="url(#swooshA)"/>
-  <path d="M83 208 C105 162 129 142 184 128 C178 156 176 184 178 214 C141 223 110 223 83 208Z" fill="url(#swooshB)"/>
+  <ellipse cx="95" cy="93" rx="60" ry="49" fill="url(#tealOrb)" transform="rotate(-16 95 93)"/>
+  <ellipse cx="90" cy="83" rx="35" ry="18" fill="#ffffff" opacity="0.2" transform="rotate(-16 90 83)"/>
 
-  <ellipse cx="112" cy="104" rx="72" ry="56" fill="url(#orb)"/>
-  <ellipse cx="103" cy="90" rx="44" ry="24" fill="#FFFFFF" opacity="0.2"/>
+  <path d="M39 168 C78 142 120 130 166 136 C133 157 104 188 85 221 C64 207 49 188 39 168Z" fill="url(#blueBand)"/>
+  <path d="M88 220 C107 170 135 141 191 126 C180 158 177 186 182 217 C144 225 111 225 88 220Z" fill="url(#cyanBand)"/>
 
-  <text x="120" y="114" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="900" letter-spacing="1.5">BYA</text>
+  <text x="95" y="108" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="900" fill="#ffffff" letter-spacing="1">BYA</text>
 
-  <path d="M188 58 l22 22" stroke="#253B82" stroke-width="5" stroke-linecap="round"/>
-  <path d="M188 58 l16 -4 l6 4 l-6 4 z" fill="#E8CF45"/>
-  <path d="M210 80 l4 -16 l10 18 z" fill="#23336F"/>
+  <path d="M183 67 l25 23" stroke="#29357b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M187 69 l15 -4 l6 4 l-6 5 z" fill="#f2d449"/>
+  <path d="M207 91 l3 -15 l10 17 z" fill="#1f2f74"/>
 
-  <text font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#23336F" letter-spacing="0.5">
-    <textPath href="#topArc" startOffset="50%" text-anchor="middle">Preparing Future Generations for Success in a Changing World!</textPath>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1d3a4f" font-weight="700" letter-spacing="0.3">
+    <textPath href="#outerTop" startOffset="50%" text-anchor="middle">Preparing the Future Generations for Success in a Changing World!</textPath>
   </text>
 
-  <text x="120" y="158" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" fill="#E8CF45">Mana Barumsaa</text>
-  <text x="120" y="173" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">Boriyadii dargaggoota</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" fill="#f3d66a" letter-spacing="0.3">
+    <textPath href="#innerBottom" startOffset="50%" text-anchor="middle">Mana Barumsaa</textPath>
+  </text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="800" fill="#ffffff" letter-spacing="0.3">
+    <textPath href="#innerBottom" startOffset="64%" text-anchor="middle">Boriyad | tuutii dargaggootaa</textPath>
+  </text>
 
-  <text font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="900" fill="#F4CF55" letter-spacing="1">
-    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">BORIYAD YOUTH ACADEMY</textPath>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="900" fill="#22387d" letter-spacing="1">
+    <textPath href="#outerBottom" startOffset="50%" text-anchor="middle">BORIYAD YOUTH ACADEMY</textPath>
   </text>
 </svg>
