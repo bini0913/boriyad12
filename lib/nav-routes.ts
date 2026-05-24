@@ -4,7 +4,6 @@ export const NAV_ROUTES = [
   { href: "/admissions", key: "admissions" },
   { href: "/student-life", key: "studentLife" },
   { href: "/results", key: "results" },
-  { href: "/gallery", key: "gallery" },
   { href: "/news", key: "news" },
   { href: "/contact", key: "contact" },
 ] as const;
