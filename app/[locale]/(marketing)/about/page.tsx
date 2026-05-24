@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function AboutPage() {
   const t = await getTranslations("about");
   const ts = await getTranslations("home.stats");
+  const managerPhoto = process.env.NEXT_PUBLIC_MANAGER_PHOTO_URL || "/hero/bya-hero-cinematic.jpg";
 
   return (
     <>
@@ -26,7 +27,7 @@ export default async function AboutPage() {
           <ScrollReveal>
             <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-[#C9A86A]/35 bg-[#081B33]/5">
               <Image
-                src="/hero/bya-hero-cinematic.jpg"
+                src={managerPhoto}
                 alt={t("leadership.imageAlt")}
                 width={900}
                 height={1120}
