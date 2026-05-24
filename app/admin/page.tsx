@@ -1,52 +1,42 @@
-import Link from "next/link";
 import { getApplicationsServer, type ApplicationRecord } from "@/services/applications.service";
-import { FileText, Clock, CheckCircle, XCircle } from "lucide-react";
+import { buildRecentActivity, getDashboardStats } from "@/lib/admin-cms";
 
 export default async function AdminDashboardPage() {
   let applications: ApplicationRecord[] = [];
-  try {
-    applications = await getApplicationsServer();
-  } catch {
-    applications = [];
-  }
-
-  const pending = applications.filter((a) => a.status === "pending").length;
-  const approved = applications.filter((a) => a.status === "approved").length;
-  const rejected = applications.filter((a) => a.status === "rejected").length;
-
-  const stats = [
-    { label: "Total Applications", value: applications.length, icon: FileText },
-    { label: "Pending Review", value: pending, icon: Clock },
-    { label: "Approved", value: approved, icon: CheckCircle },
-    { label: "Rejected", value: rejected, icon: XCircle },
-  ];
+  try { applications = await getApplicationsServer(); } catch {}
+  const stats = getDashboardStats(applications);
+  const activity = buildRecentActivity(applications);
 
   return (
-    <div>
-      <h1 className="mb-8 font-display text-2xl font-semibold text-[#0B1F3A]">Dashboard</h1>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {stats.map((s) => {
-          const Icon = s.icon;
-          return (
-            <div
-              key={s.label}
-              className="rounded-lg border border-[#0B1F3A]/10 bg-white p-6 shadow-sm"
-            >
-              <Icon className="h-5 w-5 text-[#C9A86A]" />
-              <p className="mt-4 font-display text-3xl font-semibold text-[#0B1F3A]">{s.value}</p>
-              <p className="mt-1 text-sm text-muted">{s.label}</p>
+    <div className="space-y-8">
+      <div>
+        <h1 className="font-display text-3xl font-semibold text-white">Executive Dashboard</h1>
+        <p className="mt-2 text-sm text-slate-300">Admissions and content operations in one premium CMS.</p>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {[
+          ["Pending Admissions", stats.pendingAdmissions],
+          ["Approved Applications", stats.approvedApplications],
+          ["Published News", stats.publishedNews],
+          ["Visitors", stats.visitors],
+        ].map(([label, value]) => (
+          <div key={String(label)} className="rounded-xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+            <p className="text-xs uppercase tracking-wide text-slate-400">{label}</p>
+            <p className="mt-3 font-display text-3xl text-[#E2C07A]">{value}</p>
+          </div>
+        ))}
+      </div>
+      <section className="rounded-xl border border-white/10 bg-[#06122B]/80 p-6">
+        <h2 className="font-display text-xl text-white">Recent Activity</h2>
+        <div className="mt-4 space-y-3">
+          {activity.map((item) => (
+            <div key={item.id} className="rounded-lg border border-white/10 bg-white/5 p-3">
+              <p className="text-sm font-medium text-white">{item.title}</p>
+              <p className="text-xs text-slate-300">{item.detail}</p>
             </div>
-          );
-        })}
-      </div>
-      <div className="mt-8">
-        <Link
-          href="/admin/applications"
-          className="text-sm font-medium text-[#C9A86A] hover:underline"
-        >
-          View all applications →
-        </Link>
-      </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

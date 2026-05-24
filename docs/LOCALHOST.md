@@ -24,7 +24,7 @@ npm run dev
 |------|-----|
 | Sign in | http://localhost:3000/admin-login |
 | Dashboard | http://localhost:3000/admin |
-| Applications | http://localhost:3000/admin/applications |
+| Admissions | http://localhost:3000/admin/admissions |
 
 ## Environment (`.env.local`)
 
